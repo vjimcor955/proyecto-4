@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: darkgrey  ;
+
+    &__link {
+        text-decoration: none;
+        margin: 50px 0px;
+        color: blue;
+    }
+}

@@ -1,0 +1,45 @@
+.search {
+    background-color: rgb(220, 220, 220);
+    min-height: 90vh;
+    text-align: center;
+    width: 80%; 
+    margin: 0px auto;
+
+    h1 {
+        font-size: larger;
+        padding: 30px 0px;
+    }
+
+    .form {
+        padding: 30px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__field {
+            width: 200px;
+
+            input[type="text"] {
+                width: inherit;
+            }
+
+            select {
+                width: inherit;
+            }
+        }
+    }
+
+    .grid-content {
+        padding: 50px 0px;
+        width: 100%;
+        display: grid;
+        column-gap: 4%;
+        row-gap: 50px;
+        grid-template-columns: 22% 22% 22% 22%;
+    
+        .grid-item {
+            border: 2px solid black;
+            height: 300px;
+        }
+    }
+}

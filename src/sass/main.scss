@@ -1,0 +1,21 @@
+
+@import 'utilities/reset';
+// @import 'utilities/variables';
+// @import 'utilities/functions';
+// @import 'utilities/mixins';
+
+// @import 'base/typo';
+
+// @import 'layout/header';
+// @import 'layout/footer';
+// @import 'layout/forms';
+
+@import 'components/Navbar.scss';
+@import 'components/Footer.scss';
+@import 'components/button.scss';
+
+@import "pages/Home";
+@import "pages/Search";
+@import "pages/Contact";
+@import "pages/Login";
+@import "pages/User";
