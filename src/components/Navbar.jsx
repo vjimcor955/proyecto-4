@@ -14,7 +14,6 @@ const Navbar = () => {
     navigate("/")
   }
 
-
   return (
     <nav className='navbar'>
       <div className='img'>IMAGEN</div>
@@ -28,7 +27,8 @@ const Navbar = () => {
               <button className='button' onClick={userLogout}>Logout</button>
             </>
           ) : (
-            <button className='button' onClick={userLogin}>Login</button>
+            // <button className='button' onClick={userLogin}>Login</button>
+            <NavLink to="/login" className="navbar__links__link">Login</NavLink>
           ) 
         }
       </div>
