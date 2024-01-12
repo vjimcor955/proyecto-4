@@ -13,9 +13,12 @@
 @import 'components/Navbar.scss';
 @import 'components/Footer.scss';
 @import 'components/button.scss';
+@import 'components/Card.scss';
+@import 'components/Login.scss';
+@import 'components/Register.scss';
 
 @import "pages/Home";
 @import "pages/Search";
 @import "pages/Contact";
-@import "pages/Login";
+@import "pages/LoginPage";
 @import "pages/User";
