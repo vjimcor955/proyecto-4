@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Home from "../pages/Home"
 import User from "../pages/User"
 import Search from '../pages/Search'
+import LoginPage from '../pages/LoginPage'
 import LayoutPrivate from "../layouts/LayoutPrivate"
 import LayoutRoot from "../layouts/LayoutRoot"
 
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       //   path: "/search/:id",
       //   element: <Contact />
       // },
+      {
+        path: "/login",
+        element: <LoginPage />
+      },
       {
         path: "/dashboard",
         element: <LayoutPrivate />,
