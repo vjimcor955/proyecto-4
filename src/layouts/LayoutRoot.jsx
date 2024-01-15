@@ -7,7 +7,9 @@ const LayoutRoot = () => {
   return (
     <div className='container'> 
       <Navbar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )
