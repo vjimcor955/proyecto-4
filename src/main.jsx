@@ -1,14 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './sass/main.scss'
 import { RouterProvider } from 'react-router-dom'
+import './sass/main.scss'
 import { router } from './router'
-import UserProvider, { UserContext } from './context/UserContext'
+import UserProvider from './context/UserContext'
+import PokemonProvider from './context/PokmeonContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider> 
-      <RouterProvider router={router} />
+      <PokemonProvider>
+        <RouterProvider router={router} />
+      </PokemonProvider>
     </UserProvider>
   </React.StrictMode>,
 )
