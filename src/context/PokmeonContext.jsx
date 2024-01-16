@@ -1,6 +1,5 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import useForms from '../hooks/useForms'
-
+import { useForms } from "../hooks/useForms";
 
 export const PokemonContext = createContext()
 
@@ -27,7 +26,8 @@ const PokemonProvider = ({children}) => {
     // Promise to get the data of each pokemon
     const promise = data.results.map(async(pokemon) => {
       const res = await fetch(pokemon.url)
-      const data = await res.json()  
+      const data = await res.json()
+      return data
     })
     const resultados = await Promise.all(promise)
     setPokemonList([...pokemonList, ...resultados])
@@ -43,6 +43,7 @@ const PokemonProvider = ({children}) => {
     const promise = data.results.map(async(pokemon) => {
       const res = await fetch(pokemon.url)
       const data = await res.json()  
+      return data
     })
     const resultados = await Promise.all(promise)
     setAllPokemonsList(resultados)
@@ -54,7 +55,21 @@ const PokemonProvider = ({children}) => {
     const url = "https://pokeapi.co/api/v2"
     const res = await fetch(`${url}/pokemon/${id}`)
     const data = await res.json()  
- 
+    return data
+  }
+
+  // Get all game versions
+  const getAllVersions = async () => {
+    const res = await fetch("https://pokeapi.co/api/v2/version")
+    const data = await res.json()  
+    setVersions(data.results)
+  }
+
+  // Get all pokemon types
+  const getAllTypes = async () => {
+    const res = await fetch("https://pokeapi.co/api/v2/type")
+    const data = await res.json()  
+    setTypes(data.results)
   }
 
   useEffect(() => {
@@ -71,7 +86,7 @@ const PokemonProvider = ({children}) => {
 
 
   return (
-    <PokemonContext.Provider value={{valueSearch, handleInputChange, resetForm, pokemonList, allPokemonsList, getPokemonById}}>
+    <PokemonContext.Provider value={{getAllVersions, getAllTypes, pokemonList, allPokemonsList, getPokemonById, valueSearch, handleInputChange, resetForm}}>
       {children}
     </PokemonContext.Provider>
   )
