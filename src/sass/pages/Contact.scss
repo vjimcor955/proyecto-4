@@ -1,0 +1,202 @@
+.contact {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+
+    &--img__name {
+      img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        width: 400px;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: xxx-large;
+        font-weight: bolder;
+      }
+    }
+
+    &--details {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      text-align: left;
+      font-size: large;
+      
+      &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: large;
+
+        h2 {
+          font-size: xx-large;
+          font-weight: bold;
+        }
+
+        ul {
+
+          &.stats {
+            width: 150px;
+  
+            li {
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+
+          &.types {
+            color: #fff;
+            display: flex;
+            gap: 15px;
+          }
+        }
+
+        p {
+          width: fit-content;
+
+          &.bug {
+            padding: 3px;
+            border-radius: 10%;
+            background-color: yellowgreen;
+          }
+  
+          &.dark {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: darkslategrey;
+          }
+  
+          &.dragon {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: mediumpurple;
+          }
+  
+          &.electric {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: goldenrod;
+          }
+  
+          &.fairy {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: pink;
+          }
+  
+          &.fighting {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: darkgoldenrod;
+          }
+  
+          &.fire {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: red;
+          }
+  
+          &.flying {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: lightblue;
+          }
+  
+          &.ghost {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: darkviolet;
+          }
+  
+          &.grass {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: green;
+          }
+  
+          &.ground {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: lightgoldenrodyellow;
+          }
+  
+          &.ice {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: aqua;
+          }
+  
+          &.normal {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: grey;
+          }
+  
+          &.poison {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: purple;
+          }
+  
+          &.psychic {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: fuchsia;
+          }
+  
+          &.rock {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: burlywood;
+          }
+  
+          &.steel {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: lightgray;
+          }
+  
+          &.water {
+              padding: 3px;
+              border-radius: 10%;
+              background-color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.loader {
+    border: 24px solid #FFF;
+    border-color: #FF3D00 #FF3D00 #fff #fff;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+
+  .loader:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(-50% , -125%);
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  @keyframes rotate {
+    100%   { transform: rotate(360deg)}
+  }
