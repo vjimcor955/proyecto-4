@@ -9,8 +9,8 @@ const Card = ({pokemon, shiny}) => {
       <h3 className='card--name'>{name}</h3>
       {
         shiny
-        ? <img className='card--image' src={sprites.front_shiny} alt={`Imagen de ${name}`} />
-        : <img className='card--image' src={sprites.front_default} alt={`Imagen de ${name} shiny`} />
+        ? <img className='card--image' src={sprites.front_shiny} alt={`Imagen de ${name} shiny`} />
+        : <img className='card--image' src={sprites.front_default} alt={`Imagen de ${name}`} />
       }
       <div className='card--types'>
         {

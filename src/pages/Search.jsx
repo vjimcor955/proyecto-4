@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../components/Card'
-import { usePokemonContext } from '../context/PokmeonContext'
+import { usePokemonContext } from '../context/PokemonContext'
 
 const Search = () => {
   const {types, allPokemonsList} = usePokemonContext()
@@ -46,7 +46,7 @@ const Search = () => {
     )
     return pokemonResults
   }
-  // Filter by both filters
+  // Filter by both
   const filterPokemonBoth = () => {
     const pokemonType = allPokemonsList.filter(pokemon => 
       pokemon.types
@@ -59,7 +59,6 @@ const Search = () => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    console.log(formState)
     if (formState.name != "" && formState.type != "default") {
       setResultPokemon(filterPokemonBoth)
     } else if (formState.name === "" && formState.type === "default") {

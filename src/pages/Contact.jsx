@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { usePokemonContext } from '../context/PokmeonContext'
+import { usePokemonContext } from '../context/PokemonContext'
 import { useParams } from 'react-router-dom'
 
 const Contact = () => {
