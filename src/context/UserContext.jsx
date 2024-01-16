@@ -93,7 +93,7 @@ const UserProvider = ({children}) => {
       users = usersLS
     }
     console.log(users)
-    users.push(userDataLogin)
+    users.push(userDataRegister)
     localStorage.setItem("Users", JSON.stringify(users))
   }
 
