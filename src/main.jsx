@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom'
 import './sass/main.scss'
 import { router } from './router'
 import UserProvider from './context/UserContext'
-import PokemonProvider from './context/PokmeonContext'
+import PokemonProvider from './context/PokemonContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
