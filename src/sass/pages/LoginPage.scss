@@ -3,5 +3,26 @@
     display: flex;
     justify-content: center;
     align-items: center ;
-    gap: 100px;
+    gap: 200px;
+    
+    .login__div, .register__div {
+        height: 400px;
+        width: 275px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center
+    }
+
+    &__title--login {
+        font-size: x-large;
+        font-weight: bold;    
+        margin-bottom: 100px;
+    }
+
+    &__title--register {
+        font-size: x-large;
+        font-weight: bold;    
+        margin-bottom: 40px;
+    }
 }
