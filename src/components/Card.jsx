@@ -15,7 +15,7 @@ const Card = ({pokemon}) => {
           ))
         }
       </div>
-      <button className='button'><Link to={`/pokemon/${id}`}> Mas información</Link></button>
+      <Link to={`/pokemon/${id}`}><button className='button'>Mas información</button></Link>
     </div>
   );
 };
