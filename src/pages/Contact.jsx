@@ -18,7 +18,7 @@ const Contact = () => {
     getPokemonData(id)
   }, []) 
 
-  // 5 seconds timer before the contact page is shown
+  // 2 seconds timer before the contact page is shown
   useEffect(() => {
     const loaderTimeout = setTimeout(() => {
       setLoader(false)
