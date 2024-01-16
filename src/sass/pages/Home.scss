@@ -16,6 +16,7 @@ main {
     
             &--title {
                 font-size: 3em;
+                font-weight: bold;
             }
     
             &--messagge {
@@ -25,7 +26,8 @@ main {
             &--button {
     
                 .link {
-                    font-style: none;
+                    text-decoration: none;
+                    font-size: 1.2em;
                 }
             }
         }
