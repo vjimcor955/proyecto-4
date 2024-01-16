@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({pokemon}) => {
+const Card = ({pokemon, shiny}) => {
   const {id, name, sprites, types} = pokemon;
 
   return (
     <div className='card' key={id}>
       <h3 className='card--name'>{name}</h3>
-      <img className='card--image' src={sprites.front_default} alt={`Imagen de ${name}`} />
+      {
+        shiny
+        ? <img className='card--image' src={sprites.front_shiny} alt={`Imagen de ${name}`} />
+        : <img className='card--image' src={sprites.front_default} alt={`Imagen de ${name} shiny`} />
+      }
       <div className='card--types'>
         {
           types.map((type, index) => (
