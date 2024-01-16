@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <div className='img'>IMAGEN</div>
+      <img src="./pokemon_logo.png" alt="Logo Pokemon" />
       <div className='navbar__links'>
         <NavLink to="/" className='navbar__links__link'>Home</NavLink>
         <NavLink to="/search" className='navbar__links__link'>Buscador</NavLink>
