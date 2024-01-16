@@ -76,7 +76,7 @@ const UserProvider = ({children}) => {
   const handleLogin = (e) => {
     e.preventDefault()
     const data = JSON.parse(localStorage.getItem("Users"))
-    data.map(user => {
+    data?.map(user => {
       if (user.email === userDataLogin.email && user.password === userDataLogin.password) {
         setEmail(userDataLogin.email)
         setUser(true)
@@ -100,7 +100,7 @@ const UserProvider = ({children}) => {
     // Function gets an user data
     const getUserData = (email) => {
       const data = JSON.parse(localStorage.getItem("Users"))
-      data.map(user => {
+      data?.map(user => {
         if (user.email === email) {
           showUserData['name'] = user.name
           showUserData['email'] = user.email
