@@ -17,7 +17,7 @@ const Login = () => {
       {
         user 
         ? <button type='submit' onClick={handleLogin}>Iniciar sesión</button> 
-        : <button type='submit' onClick={handleLogin}><NavLink to="/user" className="button">Iniciar Sesión</NavLink></button>
+        : <button type='submit' onClick={handleLogin}><NavLink to="/" className="button">Iniciar Sesión</NavLink></button>
       }
     </form>
   )
