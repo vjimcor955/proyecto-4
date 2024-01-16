@@ -22,7 +22,7 @@ const Contact = () => {
   useEffect(() => {
     const loaderTimeout = setTimeout(() => {
       setLoader(false)
-    }, 5000)
+    }, 2000)
     return () => clearTimeout(loaderTimeout);
   }, []);
 
