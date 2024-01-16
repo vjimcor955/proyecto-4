@@ -1,14 +1,7 @@
 
 @import 'utilities/reset';
-// @import 'utilities/variables';
-// @import 'utilities/functions';
-// @import 'utilities/mixins';
 
 // @import 'base/typo';
-
-// @import 'layout/header';
-// @import 'layout/footer';
-// @import 'layout/forms';
 
 @import 'components/Navbar.scss';
 @import 'components/Footer.scss';
@@ -16,6 +9,7 @@
 @import 'components/Card.scss';
 @import 'components/Login.scss';
 @import 'components/Register.scss';
+@import 'components/ToTopButton.scss';
 
 @import "pages/Home";
 @import "pages/Search";
