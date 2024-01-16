@@ -1,5 +1,4 @@
-import { createContext, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const UserContext = createContext(true)
 
@@ -17,6 +16,13 @@ const UserProvider = ({children}) => {
   }
   const userDataLogin = {
     email: "",
+    password: ""
+  }
+  const [email, setEmail] = useState('')
+  const showUserData = {
+    name: "",
+    email: "",
+    date: "",
     password: ""
   }
 
@@ -65,12 +71,14 @@ const UserProvider = ({children}) => {
       userDataLogin[e.target.name] = e.target.value      
     }
   }
+  
   // Function that manages the login system
   const handleLogin = (e) => {
     e.preventDefault()
     const data = JSON.parse(localStorage.getItem("Users"))
     data.map(user => {
       if (user.email === userDataLogin.email && user.password === userDataLogin.password) {
+        setEmail(userDataLogin.email)
         setUser(true)
       }
     })
@@ -89,11 +97,29 @@ const UserProvider = ({children}) => {
     localStorage.setItem("Users", JSON.stringify(users))
   }
 
+    // Function gets an user data
+    const getUserData = (email) => {
+      const data = JSON.parse(localStorage.getItem("Users"))
+      data.map(user => {
+        if (user.email === email) {
+          showUserData['name'] = user.name
+          showUserData['email'] = user.email
+          showUserData['date'] = user.date
+          showUserData['password'] = user.password
+        }
+      })
+      return showUserData
+    }
+
+    useEffect(() => {
+      getUserData()
+    })
+
 
 
 
   return (
-    <UserContext.Provider value={{user, setUser, nameValidated, emailValidated, buttonDisabled, handleFieldChangeRegister, handleFieldChangeLogin, handleLogin, handleRegister}}>
+    <UserContext.Provider value={{user, setUser, nameValidated, emailValidated, buttonDisabled, handleFieldChangeRegister, handleFieldChangeLogin, handleLogin, handleRegister, getUserData, email}}>
       {children}
     </UserContext.Provider>
   )
