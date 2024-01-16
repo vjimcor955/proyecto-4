@@ -2,9 +2,6 @@ import Login from "../components/Login"
 import Register from "../components/Register"
 
 const LoginPage = () => {
-
-  
-
   return (
     <div className="formularios">
       <div className="login__div">
