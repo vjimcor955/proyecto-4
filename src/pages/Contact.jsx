@@ -69,48 +69,6 @@ const Contact = () => {
           </div>
       }
     </div>
-
-    
-    // <div className="contact">
-    //   <div className='contact__data'>
-    //     <div className="contact__data--img__name">
-    //       <div className="img">
-    //         {
-    //           loader 
-    //           ? <span className="loader"></span>
-    //           : <img src={pokemon.sprites.front_default} alt={`Imagen de ${pokemon.name}`} />
-    //         }
-    //       </div>
-    //       <h1>{pokemon.name}</h1>
-    //     </div>
-    //     <div className="contact__data--details">
-    //       <div className="contact__data--details__field">
-    //         <h2>ID</h2>
-    //         <p>{pokemon.id}</p>
-    //       </div>
-    //       <div className="contact__data--details__field">
-    //         <h2>Types</h2>
-    //         <ul className='types'>
-    //             {
-    //               pokemon.types.map((type, index) => (
-    //                 <p key={index} className={type.type.name}>{type.type.name}</p>
-    //               ))
-    //             }
-    //         </ul>
-    //       </div>
-    //       <div className="contact__data--details__field">
-    //         <h2>Stats</h2>
-    //         <ul className='stats'>
-    //           {
-    //             pokemon.stats.map((stat, index) => (
-    //               <li key={index}><p>{stat.stat.name}:</p> <p>{stat.base_stat}</p></li>
-    //             ))
-    //           }
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   )
 }
 
