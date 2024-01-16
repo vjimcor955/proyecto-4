@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../components/Card'
 import { usePokemonContext } from '../context/PokemonContext'
+import ToTopButton from '../components/ToTopButton'
 
 const Search = () => {
   const {types, allPokemonsList} = usePokemonContext()
@@ -97,19 +98,20 @@ const Search = () => {
           </div>
         </div>   
       </form>
-        {
-          loader 
-          ? <div className="loader__div">
-              <span className="loader"></span>
-            </div>
-          : <div className='grid__content'>
-              {
-                resultPokemon?.map(pokemon => (
-                  <Card pokemon={pokemon} key={pokemon.id} shiny={shiny}/>
-                ))
-              }
-            </div>
-        }
+      {
+        loader 
+        ? <div className="loader__div">
+            <span className="loader"></span>
+          </div>
+        : <div className='grid__content'>
+            {
+              resultPokemon?.map(pokemon => (
+                <Card pokemon={pokemon} key={pokemon.id} shiny={shiny}/>
+              ))
+            }
+          </div>
+      }
+      <ToTopButton />
     </div>
   )
 }
