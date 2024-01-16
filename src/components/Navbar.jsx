@@ -5,10 +5,6 @@ const Navbar = () => {
   const {user, setUser} = useUserContext()
   const navigate = useNavigate()
 
-  const userLogin = () => {
-    setUser(true)
-    navigate("/dashboard")
-  }
   const userLogout = () => {
     setUser(false)
     navigate("/")
@@ -23,12 +19,11 @@ const Navbar = () => {
         {
           user? (
             <>
-              <NavLink to="/dashboard" className='navbar__links__link'>User</NavLink>
+              <NavLink to="/user" className='navbar__links__link'>User</NavLink>
               <button className='button' onClick={userLogout}>Logout</button>
             </>
           ) : (
-            // <button className='button' onClick={userLogin}>Login</button>
-            <NavLink to="/login" className="navbar__links__link">Login</NavLink>
+            <button><NavLink to="/login" className='button'>Login</NavLink></button>
           ) 
         }
       </div>
