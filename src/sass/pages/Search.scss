@@ -1,5 +1,5 @@
 .search {
-    background-color: rgb(220, 220, 220);
+    // background-color: rgb(220, 220, 220);
     min-height: 90vh;
     text-align: center;
     width: 80%; 
@@ -13,33 +13,50 @@
     .form {
         padding: 30px 0px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
 
-        &__field {
-            width: 200px;
-
+        &__search-bar {
+            margin-bottom: 40px;
+            height: 40px;
+            
             input[type="text"] {
-                width: inherit;
+                width: 500px;
+                height: inherit;
             }
 
-            select {
-                width: inherit;
+            .button {
+                height: inherit;
             }
         }
+
+        &__filters {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &--field {
+                width: 150px;
+    
+                select {
+                    width: inherit;
+                }
+            }
+        }
+
+    }
+    
+    .loader__div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .grid-content {
+    .grid__content {
         padding: 50px 0px;
         width: 100%;
         display: grid;
         column-gap: 4%;
         row-gap: 50px;
         grid-template-columns: 22% 22% 22% 22%;
-    
-        .grid-item {
-            border: 2px solid black;
-            height: 300px;
-        }
     }
 }
