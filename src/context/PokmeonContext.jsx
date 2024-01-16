@@ -10,9 +10,7 @@ const PokemonProvider = ({children}) => {
   const [allPokemonsList, setAllPokemonsList] = useState([])
   const [versions, setVersions] = useState([])
   const [types, setTypes] = useState([])
-
   const [loading, setLoading] = useState(true)
-  const [active, setActive] = useState(false)
 
   const {valueSearch, handleInputChange, resetForm} = useForms({
     valueSearch: ""
@@ -84,10 +82,6 @@ const PokemonProvider = ({children}) => {
   useEffect(() => {
     // getAllPokemons()
   })
-
-
-
-
 
 
   return (
