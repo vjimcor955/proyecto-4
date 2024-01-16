@@ -8,6 +8,8 @@ const PokemonProvider = ({children}) => {
   const [offset, setOffset] = useState(0)
   const [pokemonList, setPokemonList] = useState([])
   const [allPokemonsList, setAllPokemonsList] = useState([])
+  const [versions, setVersions] = useState([])
+  const [types, setTypes] = useState([])
 
   const [loading, setLoading] = useState(true)
   const [active, setActive] = useState(false)
@@ -60,7 +62,8 @@ const PokemonProvider = ({children}) => {
 
   // Get all game versions
   const getAllVersions = async () => {
-    const res = await fetch("https://pokeapi.co/api/v2/version")
+    const url = "https://pokeapi.co/api/v2/version"
+    const res = await fetch(url)
     const data = await res.json()  
     setVersions(data.results)
   }
@@ -74,6 +77,8 @@ const PokemonProvider = ({children}) => {
 
   useEffect(() => {
     getPokemons()
+    getAllVersions()
+    getAllTypes()
   }, [])
 
   useEffect(() => {
@@ -86,7 +91,7 @@ const PokemonProvider = ({children}) => {
 
 
   return (
-    <PokemonContext.Provider value={{getAllVersions, getAllTypes, pokemonList, allPokemonsList, getPokemonById, valueSearch, handleInputChange, resetForm}}>
+    <PokemonContext.Provider value={{versions, types, pokemonList, allPokemonsList, getPokemonById, valueSearch, handleInputChange, resetForm}}>
       {children}
     </PokemonContext.Provider>
   )
