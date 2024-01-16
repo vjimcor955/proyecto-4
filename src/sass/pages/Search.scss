@@ -1,5 +1,4 @@
 .search {
-    // background-color: rgb(220, 220, 220);
     min-height: 90vh;
     text-align: center;
     width: 80%; 
@@ -45,11 +44,11 @@
 
     }
     
-    .loader__div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .loader__div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
     .grid__content {
         padding: 50px 0px;
